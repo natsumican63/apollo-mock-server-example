@@ -1,0 +1,21 @@
+type Query {
+  hello: String
+  number: Int
+  me: User
+}
+
+type Mutation {
+  UserLogin(email: String, password: String): Login
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+}
+
+type Login {
+  access_token: String
+  token_type: String
+  expired_in: Int
+}
